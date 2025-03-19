@@ -4,7 +4,7 @@
 
 ## About the Project
 
-TBD
+My attempt of the SwiftUI animations challenge, final day in Project 6.
 
 ## Demos
 
