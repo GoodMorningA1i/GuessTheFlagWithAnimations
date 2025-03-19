@@ -42,6 +42,7 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
+                            //TODO: spin 360 degrees on Y axis
                         } label: {
                             FlagImage(countryName: countries[number])
                         }
