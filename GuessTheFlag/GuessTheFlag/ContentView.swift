@@ -17,6 +17,8 @@ struct ContentView: View {
     let totalNumOfQuestions = 8
     @State private var gameComplete = false
     
+    @State private var animationAmount = 0.0
+    
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -42,10 +44,13 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
-                            //TODO: spin 360 degrees on Y axis
+                            withAnimation {
+                                animationAmount += 360
+                            }
                         } label: {
                             FlagImage(countryName: countries[number])
                         }
+                        .rotation3DEffect(Angle(degrees: animationAmount), axis: (x:0, y:1, z:0))
                     }
                 }
                 .frame(maxWidth: .infinity)
