@@ -8,7 +8,9 @@ My attempt of the SwiftUI animations challenge, final day in Project 6.
 
 ## Demos
 
-TBD
+Section 1 
+
+https://github.com/user-attachments/assets/49608503-8af0-44f8-9ff8-f795e9d62a57
 
 ### Built With
 
