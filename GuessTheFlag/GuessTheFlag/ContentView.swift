@@ -47,6 +47,7 @@ struct ContentView: View {
                             withAnimation {
                                 animationAmount += 360
                             }
+                            //TODO: only animation the button that is tapped
                         } label: {
                             FlagImage(countryName: countries[number])
                         }
