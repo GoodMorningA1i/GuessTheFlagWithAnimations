@@ -17,7 +17,7 @@ struct ContentView: View {
     let totalNumOfQuestions = 8
     @State private var gameComplete = false
     
-    @State private var animationAmount = 0.0
+    @State private var animationAmounts = [0.0, 0.0, 0.0]
     
     var body: some View {
         ZStack {
@@ -44,14 +44,14 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
+                            print(countries[number])
                             withAnimation {
-                                animationAmount += 360
+                                animationAmounts[number] += 360
                             }
-                            //TODO: only animation the button that is tapped
                         } label: {
                             FlagImage(countryName: countries[number])
                         }
-                        .rotation3DEffect(Angle(degrees: animationAmount), axis: (x:0, y:1, z:0))
+                        .rotation3DEffect(Angle(degrees: animationAmounts[number]), axis: (x:0, y:1, z:0))
                     }
                 }
                 .frame(maxWidth: .infinity)
