@@ -8,9 +8,13 @@ My attempt of the SwiftUI animations challenge, final day in Project 6.
 
 ## Demos
 
-Section 1 
+Section 1 - Make all the flags spin
 
 https://github.com/user-attachments/assets/49608503-8af0-44f8-9ff8-f795e9d62a57
+
+Section 1 - Make the flag that is tapped spin
+
+https://github.com/user-attachments/assets/15f459a3-8724-4e82-8603-682d0d37b4d7
 
 ### Built With
 
