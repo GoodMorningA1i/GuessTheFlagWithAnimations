@@ -44,7 +44,6 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
-                            print(countries[number])
                             withAnimation {
                                 animationAmounts[number] += 360
                             }
