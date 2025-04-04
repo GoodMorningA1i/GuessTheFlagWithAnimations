@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var gameComplete = false
     
     @State private var animationAmounts = [0.0, 0.0, 0.0]
+    @State private var flagSelected: Int? = nil
     
     var body: some View {
         ZStack {
@@ -43,6 +44,7 @@ struct ContentView: View {
                     }
                     ForEach(0..<3) { number in
                         Button {
+                            flagSelected = number
                             flagTapped(number)
                             withAnimation {
                                 animationAmounts[number] += 360
@@ -51,6 +53,7 @@ struct ContentView: View {
                             FlagImage(countryName: countries[number])
                         }
                         .rotation3DEffect(Angle(degrees: animationAmounts[number]), axis: (x:0, y:1, z:0))
+                        .opacity(setOpacity(number))
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -97,6 +100,7 @@ struct ContentView: View {
         } else {
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
+            flagSelected = nil
         }
     }
     
@@ -105,6 +109,13 @@ struct ContentView: View {
         userScore = 0
         
         askQuestion()
+    }
+    
+    func setOpacity(_ number: Int) -> Double {
+        guard flagSelected != nil else {
+            return 1.0
+        }
+        return flagSelected != number ? 0.25 : 1.0
     }
 }
 
