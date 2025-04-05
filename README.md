@@ -16,6 +16,10 @@ Section 1 - Make the flag that is tapped spin
 
 https://github.com/user-attachments/assets/15f459a3-8724-4e82-8603-682d0d37b4d7
 
+Section 2 - Fade out the other flags that weren't tapped 
+
+https://github.com/user-attachments/assets/ea70bbad-bdbe-48ff-8641-6022d7a6d861
+
 ### Built With
 
 Xcode, SwiftUI
