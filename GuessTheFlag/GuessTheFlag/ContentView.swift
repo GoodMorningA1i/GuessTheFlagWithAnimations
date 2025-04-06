@@ -54,6 +54,8 @@ struct ContentView: View {
                         }
                         .rotation3DEffect(Angle(degrees: animationAmounts[number]), axis: (x:0, y:1, z:0))
                         .opacity(setOpacity(number))
+                        .scaleEffect(shrinkFlag(number))
+                        .animation(.default, value: shrinkFlag(number))
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -116,6 +118,13 @@ struct ContentView: View {
             return 1.0
         }
         return flagSelected != number ? 0.25 : 1.0
+    }
+    
+    func shrinkFlag(_ number: Int) -> Double {
+        guard flagSelected != nil else {
+            return 1.0
+        }
+        return flagSelected != number ? 0.5 : 1.0
     }
 }
 
