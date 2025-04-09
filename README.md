@@ -1,10 +1,8 @@
-# GuessTheFlagWithAnimations
-
 # Project 6 - 100 Days of SwiftUI
 
 ## About the Project
 
-My attempt of the SwiftUI animations challenge, final day in Project 6.
+My attempt of the SwiftUI animations challenge, final day in Project 6. An extension of GuessTheFlag project, but with animations ✨
 
 ## Demos
 
